@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 from os import path
 
 try:
@@ -14,17 +13,15 @@ try:
     from m2r2 import parse_from_file
 
     readme = parse_from_file(readme_file)
-except ImportError:
+except (ImportError, TypeError):
     with open(readme_file) as f:
         readme = f.read()
 
 
 __version__ = "0.3.3"
 
-install_requires = ["mistune==0.8.4", "docutils>=0.19"]
+install_requires = ["mistune>=2.0.0,<3.0", "docutils>=0.16,<1.0"]
 test_requirements = ["pygments"]
-if sys.version_info < (3, 3):
-    test_requirements.append("mock")
 
 setup(
     name="m2r2",
