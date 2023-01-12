@@ -24,7 +24,8 @@ Token = Dict[str, Any]
 Element = Tuple[str, ...]
 
 _is_sphinx = False
-prolog = """\
+
+PROLOG = """\
 .. role:: raw-html-m2r(raw)
    :format: html
 
@@ -356,6 +357,9 @@ class RestRenderer(mistune.renderers.BaseRenderer):
         """
         return r"\ *{}*\ ".format(text)
 
+    def strong(self, text):
+        return r"**{}**".format(text)
+
     def codespan(self, text):
         """Rendering inline `code` text.
 
@@ -563,7 +567,7 @@ class M2R(mistune.Markdown):
             .replace("\\ .", ".")
         )
         if self.renderer._include_raw_html:
-            return prolog + output
+            return PROLOG + output
         else:
             return output
 
