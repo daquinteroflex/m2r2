@@ -538,7 +538,7 @@ class RestRenderer(mistune.renderers.BaseRenderer):
     def directive(self, text):
         return "\n" + text
 
-    def rest_code_block(self):
+    def rest_code_block(self, text):
         return "\n\n"
 
 
