@@ -5,10 +5,9 @@ from __future__ import print_function, unicode_literals
 
 from unittest import TestCase, skip
 
-from docutils.core import Publisher
 from docutils import io
-
-from m2r2 import prolog, convert
+from docutils.core import Publisher
+from m2r2 import PROLOG, convert
 
 
 class RendererTestBase(TestCase):
@@ -77,7 +76,7 @@ class TestBasic(RendererTestBase):
         src = 'abc def  \nghi'
         out = self.conv(src)
         self.assertEqual(
-            out, prolog + '\nabc def\\ :raw-html-m2r:`<br>`\nghi' + '\n',
+            out, PROLOG + '\nabc def\\ :raw-html-m2r:`<br>`\nghi' + '\n',
         )
 
 
@@ -276,7 +275,7 @@ class TestInlineMarkdown(RendererTestBase):
     def test_inline_html(self):
         src = 'this is <s>html</s>.'
         out = self.conv(src)
-        self.assertEqual(out, prolog + '\nthis is :raw-html-m2r:`<s>html</s>`.\n')
+        self.assertEqual(out, PROLOG + '\nthis is :raw-html-m2r:`<s>html</s>`.\n')
 
     def test_block_html(self):
         src = '<h1>title</h1>'

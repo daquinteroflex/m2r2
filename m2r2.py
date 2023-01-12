@@ -249,7 +249,7 @@ class RestRenderer(mistune.renderers.BaseRenderer):
         return "\n..\n\n{}\n\n".format(self._indent_block(text.strip("\n")))
 
     def block_text(self, text):
-        text
+        return text
 
     def block_html(self, html):
         """Rendering block level pure html content.
@@ -279,7 +279,7 @@ class RestRenderer(mistune.renderers.BaseRenderer):
         """Rendering method for ``<hr>`` tag."""
         return "\n----\n"
 
-    def list(self, body, ordered=True):
+    def list(self, body, ordered, level, start):
         """Rendering list tags like ``<ul>`` and ``<ol>``.
 
         :param body: body contents of the list.
@@ -292,7 +292,7 @@ class RestRenderer(mistune.renderers.BaseRenderer):
                 lines[i] = " " * len(mark) + line
         return "\n{}\n".format("\n".join(lines)).replace(self.list_marker, mark)
 
-    def list_item(self, text):
+    def list_item(self, text, level):
         """Rendering list item snippet. Like ``<li>``."""
         return "\n" + self.list_marker + text
 
