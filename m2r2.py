@@ -176,21 +176,22 @@ class RestInlineParser(mistune.InlineParser):
         )
         self.EMPHASIS = re.compile(r"^\*(?P<text>(?:\*\*|[^\*])+?)\*(?!\*)")  # *word*
 
-
-#    def __init__(self, renderer, *args, **kwargs):
-#        no_underscore_emphasis = kwargs.pop("no_underscore_emphasis", False)
-#        disable_inline_math = kwargs.pop("disable_inline_math", False)
-#        super().__init__(*args, **kwargs)
-#        if not _is_sphinx:
-#            parse_options()
-#        if no_underscore_emphasis or getattr(options, "no_underscore_emphasis", False):
-#            self.rules.no_underscore_emphasis()
-#        inline_maths = "inline_math" in self.default_rules
-#        if disable_inline_math or getattr(options, "disable_inline_math", False):
-#            if inline_maths:
-#                self.RUlE_NAMES = tuple(x for x in self.RUlE_NAMES if x != "inline_math")
-#        elif not inline_maths:
-#            self.RUlE_NAMES = ("inline_math", *self.RUlE_NAMES)
+    def __init__(self, renderer, *args, **kwargs):
+        no_underscore_emphasis = kwargs.pop("no_underscore_emphasis", False)
+        disable_inline_math = kwargs.pop("disable_inline_math", False)
+        super().__init__(renderer, *args, **kwargs)
+        if not _is_sphinx:
+            parse_options()
+        if no_underscore_emphasis or getattr(options, "no_underscore_emphasis", False):
+            self.rules.no_underscore_emphasis()
+        inline_maths = "inline_math" in self.RULE_NAMES
+        if disable_inline_math or getattr(options, "disable_inline_math", False):
+            if inline_maths:
+                self.RULE_NAMES = tuple(
+                    x for x in self.RUlE_NAMES if x != "inline_math"
+                )
+        elif not inline_maths:
+            self.RUlE_NAMES = ("inline_math", *self.RUlE_NAMES)
 
 
 class RestRenderer(mistune.renderers.BaseRenderer):
