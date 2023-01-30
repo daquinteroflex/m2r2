@@ -2,7 +2,7 @@ import os
 from urllib.parse import urlparse
 
 from docutils.utils import column_width
-from mistune.core import BaseRenderer
+from mistune.renderers import BaseRenderer
 
 _is_sphinx = False
 
