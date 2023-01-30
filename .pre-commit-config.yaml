@@ -26,7 +26,6 @@ repos:
       language: system
       types: [python]
       args: []
-      language_version: python3.7
       exclude: (docs|tests)/*
     - id: mypy
       name: mypy

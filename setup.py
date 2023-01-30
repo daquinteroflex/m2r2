@@ -18,7 +18,7 @@ except (ImportError, TypeError):
         readme = f.read()
 
 
-__version__ = "0.3.3.post2"
+__version__ = "1.0.0"
 
 install_requires = ["mistune>=2.0.0,<3.0", "docutils>=0.16,<1.0"]
 test_requirements = ["pygments"]
@@ -57,4 +57,5 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     python_requires=">=3.7",
+    packages=["m2r2"],
 )
