@@ -93,3 +93,5 @@ ghostdriver.log
 
 # nox
 .nox/*
+
+venv*
