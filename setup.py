@@ -59,5 +59,5 @@ setup(
     install_requires=install_requires,
     test_suite="tests",
     tests_require=test_requirements,
-    python_requires='>=3.7',
+    python_requires=">=3.7",
 )
