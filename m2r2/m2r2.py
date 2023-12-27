@@ -6,9 +6,9 @@ from __future__ import print_function, unicode_literals
 import mistune
 from pkg_resources import get_distribution
 
-from m2r2.constants import PROLOG
-from m2r2.rst.parser import RestBlockParser, RestInlineParser
-from m2r2.rst.renderer import RestRenderer
+from .constants import PROLOG
+from .rst.parser import RestBlockParser, RestInlineParser
+from .rst.renderer import RestRenderer
 
 __version__ = get_distribution("m2r2").version
 

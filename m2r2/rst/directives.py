@@ -60,7 +60,7 @@ class MdInclude(rst.Directive):
         except IOError as error:
             raise self.severe(
                 'Problems with "%s" directive path:\n%s.'
-                % (self.name, io.error_string(error))
+                # % (self.name, io.error_string(error))
             )
 
         # read from the file
