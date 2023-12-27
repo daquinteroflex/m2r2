@@ -77,13 +77,13 @@ class MdInclude(rst.Directive):
                 'Problem with "%s" directive:\n%s' % (self.name, io.error_string(error))
             )
 
-        config = self.state.document.settings.env.config
+        # config = self.state.document.settings.env.config
         converter = M2R(
-            no_underscore_emphasis=config.no_underscore_emphasis,
-            parse_relative_links=config.m2r_parse_relative_links,
-            anonymous_references=config.m2r_anonymous_references,
-            disable_inline_math=config.m2r_disable_inline_math,
-            use_mermaid=config.m2r_use_mermaid,
+            # no_underscore_emphasis=config.no_underscore_emphasis,
+            # parse_relative_links=config.m2r_parse_relative_links,
+            # anonymous_references=config.m2r_anonymous_references,
+            # disable_inline_math=config.m2r_disable_inline_math,
+            # use_mermaid=config.m2r_use_mermaid,
         )
         include_lines = statemachine.string2lines(
             converter(rawtext), tab_width, convert_whitespace=True
