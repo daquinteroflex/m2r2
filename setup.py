@@ -13,7 +13,7 @@ try:
     from m2r2 import parse_from_file
 
     readme = parse_from_file(readme_file)
-except (ImportError, TypeError):
+except:
     with open(readme_file) as f:
         readme = f.read()
 
