@@ -230,7 +230,7 @@ class RestRenderer(BaseRenderer):
             underscore = "_"
         if title:
             return self._raw_html(
-                '<a href="{link}" title="{title}">{text}</a>'.format(
+                '<a href="{link}" title="{title}">{title}</a>'.format(
                     link=link, title=title, text=text
                 )
             )

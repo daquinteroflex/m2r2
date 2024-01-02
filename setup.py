@@ -18,7 +18,7 @@ except:
         readme = f.read()
 
 
-__version__ = "1.0.0"
+__version__ = "2.0.0rc1"
 
 install_requires = ["mistune>=2.0.0,<3.0", "docutils>=0.16,<1.0"]
 test_requirements = ["pygments"]
