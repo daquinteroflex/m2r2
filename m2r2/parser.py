@@ -1,7 +1,7 @@
 from docutils import statemachine
 from docutils.parsers import rst
 
-from m2r2 import M2R
+from .m2r2 import M2R
 
 
 class M2RParser(rst.Parser):

@@ -1,7 +1,7 @@
 import os
 from argparse import ArgumentParser, Namespace
 
-from m2r2 import convert
+from ..m2r2 import convert
 
 parser = ArgumentParser()
 options = Namespace()
