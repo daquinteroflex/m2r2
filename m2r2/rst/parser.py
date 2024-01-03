@@ -3,7 +3,7 @@ from typing import Match
 
 import mistune
 
-from m2r2.typing import Element, State, Token
+from ..typing import Element, State, Token
 
 # TODO: fix global
 _is_sphinx = False
