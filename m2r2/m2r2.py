@@ -8,7 +8,8 @@ from pkg_resources import get_distribution
 
 from .constants import PROLOG
 print("Importing from m2r2/m2r2.py .rst")
-from .rst import RestBlockParser, RestInlineParser, RestRenderer
+from .rst_parser import RestBlockParser, RestInlineParser
+from .rst_renderer import RestRenderer
 
 __version__ = get_distribution("m2r2").version
 
