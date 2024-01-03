@@ -9,13 +9,8 @@ except ImportError:
     from distutils.core import setup
 
 readme_file = path.join(path.dirname(path.abspath(__file__)), "README.md")
-try:
-    from m2r2 import parse_from_file
-
-    readme = parse_from_file(readme_file)
-except:
-    with open(readme_file) as f:
-        readme = f.read()
+with open(readme_file) as f:
+    readme = f.read()
 
 
 __version__ = "2.0.0rc1"
