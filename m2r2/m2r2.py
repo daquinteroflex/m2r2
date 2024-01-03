@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-print("Importing from m2r2/m2r2.py")
 from __future__ import print_function, unicode_literals
+print("Importing from m2r2/m2r2.py")
 
 import mistune
 from pkg_resources import get_distribution
