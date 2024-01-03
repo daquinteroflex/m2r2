@@ -7,4 +7,4 @@ print("tryagain")
 from .sphinx.m2r2 import setup
 
 
-__all__ = ("M2R", "convert", "setup", "rst")
+# __all__ = ("M2R", "convert", "setup", "rst")
