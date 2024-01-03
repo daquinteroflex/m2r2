@@ -1,6 +1,6 @@
 from m2r2.m2r2 import __version__
 from m2r2.parser import M2RParser
-from m2r2.rst.directives import MdInclude
+from ..rst.directives import MdInclude
 
 _is_sphinx = False
 

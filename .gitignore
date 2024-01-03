@@ -95,3 +95,4 @@ ghostdriver.log
 .nox/*
 
 venv*
+.idea/*
