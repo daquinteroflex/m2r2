@@ -1,7 +1,7 @@
 print("Importing from m2r2.sphinx.m2r2")
-from ..m2r2 import __version__
-from ..parser import M2RParser
-from ..directives import MdInclude
+from .m2r2 import __version__
+from .parser import M2RParser
+from .directives import MdInclude
 
 _is_sphinx = False
 

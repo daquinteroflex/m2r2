@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from __future__ import print_function, unicode_literals
-print("Importing from m2r2/m2r2.py")
+print("Importing from m2r2/sphinx_m2r2.py")
 
 import mistune
 from pkg_resources import get_distribution
 
 from .constants import PROLOG
-print("Importing from m2r2/m2r2.py .rst")
+print("Importing from m2r2/sphinx_m2r2.py .rst")
 from .rst_parser import RestBlockParser, RestInlineParser
 from .rst_renderer import RestRenderer
 

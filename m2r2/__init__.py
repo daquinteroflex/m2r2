@@ -10,7 +10,7 @@ from .rst_renderer import *
 print("Importing from .m2r2")
 from .m2r2 import M2R, convert
 print("tryagain")
-from .sphinx.m2r2 import setup
+from .sphinx_m2r2 import setup
 
 
 # __all__ = ("M2R", "convert", "setup", "rst")
