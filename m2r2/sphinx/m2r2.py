@@ -1,5 +1,6 @@
-from m2r2.m2r2 import __version__
-from m2r2.parser import M2RParser
+print("Importing from m2r2.sphinx.m2r2")
+from ..m2r2 import __version__
+from ..parser import M2RParser
 from ..rst.directives import MdInclude
 
 _is_sphinx = False
