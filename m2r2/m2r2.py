@@ -8,12 +8,12 @@ from pkg_resources import get_distribution
 
 from .constants import PROLOG
 print("Importing from m2r2/m2r2.py .rst")
-from .rst.parser import RestBlockParser, RestInlineParser
-from .rst.renderer import RestRenderer
+from .rst import RestBlockParser, RestInlineParser, RestRenderer
 
 __version__ = get_distribution("m2r2").version
 
 print("at M2R")
+
 class M2R(mistune.Markdown):
     def __init__(self, renderer=None, block=None, inline=None, plugins=None):
         renderer = renderer or RestRenderer()

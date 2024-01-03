@@ -3,7 +3,7 @@ import os
 from docutils import io, nodes, statemachine, utils
 from docutils.parsers import rst
 
-from m2r2 import M2R
+from .m2r2 import M2R
 
 
 class MdInclude(rst.Directive):
