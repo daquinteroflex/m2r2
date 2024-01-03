@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc13afa-14b0-4d64-a848-dea06aab792d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/m2r2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/m2r2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2r2/sphinx/m2r2.py" beforeDir="false" afterPath="$PROJECT_DIR$/m2r2/sphinx/m2r2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703681877093</updated>
       <workItem from="1703681878094" duration="7005000" />
-      <workItem from="1704276080142" duration="383000" />
+      <workItem from="1704276080142" duration="1090000" />
     </task>
     <servers />
   </component>
