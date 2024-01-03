@@ -6,6 +6,7 @@ _is_sphinx = False
 
 
 def setup(app):
+    print("m2r2 setup.")
     """When used for sphinx extension."""
     global _is_sphinx
     _is_sphinx = True
@@ -21,6 +22,7 @@ def setup(app):
     except (TypeError, AttributeError):
         app.add_source_suffix(".md", "markdown")
         app.add_source_parser(M2RParser)
+    print("included mdinclude")
     app.add_directive("mdinclude", MdInclude)
     metadata = dict(
         version=__version__,
